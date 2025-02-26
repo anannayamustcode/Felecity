@@ -11,13 +11,12 @@ const subjects = [
   { name: "Biotechnology & Biomedical Engineering", icon: "🧪" },
 ];
 
-const Explore = () => {
+const Explore = React.memo(() => {
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-white to-blue-100 flex flex-col">
-      {/* Navbar */}
-      <nav className="flex justify-between items-center py-4 px-10 bg-white shadow-md w-full">
+      <nav className="flex justify-between items-center py-4 px-10 bg-white shadow-md w-full sticky top-0 z-50">
         <div className="flex items-center gap-2">
-          <img src="/src/assets/logoo.png" alt="Logo" className="h-14" />
+          <img src="/src/assets/logoo.png" alt="Virtual Labs Logo" className="h-14" />
           <div className="flex flex-col leading-tight">
             <h1 className="text-2xl font-bold">Virtual</h1>
             <h1 className="text-2xl font-bold">Labs 2.0</h1>
@@ -30,14 +29,13 @@ const Explore = () => {
         </div>
       </nav>
 
-      {/* Subject Grid */}
       <div className="flex-grow flex flex-col items-center justify-center p-10">
         <h2 className="text-4xl font-bold text-black mb-8">SUBJECTS</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-6xl">
           {subjects.map((subject, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-xl p-6 flex flex-col items-center text-center hover:scale-105 transition-transform"
+              className="bg-white shadow-lg rounded-xl p-6 flex flex-col items-center text-center hover:scale-105 transition-transform cursor-pointer"
             >
               <div className="text-5xl mb-4">{subject.icon}</div>
               <p className="font-semibold text-lg">{subject.name}</p>
@@ -47,6 +45,6 @@ const Explore = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Explore;
