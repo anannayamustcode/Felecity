@@ -6,7 +6,7 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-cyan-100 text-black p-6">
       {/* Navbar */}
-      <nav className="flex justify-between items-center py-4 border-b border-gray-300"><div className="flex items-center gap-2">
+      <nav className="flex justify-between items-center py-0.5 pb-1 border-b border-gray-300"><div className="flex items-center gap-2">
       <img src="/src/assets/logoo.png" alt="Logo" className="h-14" />
           <div className="flex flex-col leading-tight">
             <h1 className="text-2xl font-bold">Virtual</h1>
@@ -17,6 +17,8 @@ const LandingPage = () => {
             <a href="#labs" className="hover:underline font-bold text-black">Labs</a>
             <a href="#mode" className="hover:underline font-bold text-black">Mode</a>
             <a href="#about" className="hover:underline font-bold text-black">About Us</a>
+            <Link to="/signup" className="hover:underline font-bold text-black">Sign Up</Link>
+            <Link to="/login" className="hover:underline font-bold text-black">Log in</Link>
           </div>
 
       </nav>
