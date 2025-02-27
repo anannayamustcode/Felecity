@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import IITLogos from "./Components/movingIITs";
 
 const LandingPage = React.memo(() => {
   return (
@@ -38,9 +39,9 @@ const LandingPage = React.memo(() => {
           <img src="/src/assets/thing.png" alt="Virtual Lab Illustration" className="w-full" />
         </div>
       </div>
-
-      <div className="mt-24 pt-9 flex justify-center">
-        <img src="/src/assets/iitthingy.png" alt="Partner Institutes" className="w-full h-auto object-cover" />
+     
+      <div className="mt-24 pt-5 flex justify-center">
+        <IITLogos/>
       </div>
     </div>
   );

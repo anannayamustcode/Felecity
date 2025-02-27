@@ -11,9 +11,17 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.9",
+    "framer-motion": "^12.4.7",
+    "matter-js": "^0.20.0",
+    "p5": "^1.11.3",
+    "quill": "^2.0.3",
+    "rc-progress": "^4.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.2.0"
+    "react-router-dom": "^7.2.0",
+    "react-simple-star-rating": "^5.1.7",
+    "react-youtube": "^10.1.0",
+    "uniqid": "^5.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
