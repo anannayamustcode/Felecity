@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import IITLogos from "./Components/movingIITs";
+import IITLogos from "./Components/Others/movingIITs";
 
 const LandingPage = React.memo(() => {
   return (

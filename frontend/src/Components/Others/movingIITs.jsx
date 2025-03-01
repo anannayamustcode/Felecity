@@ -2,17 +2,17 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 // Importing IIT logos
-import amrita from "../assets/IITs/Amrita.png";
-import bombay from "../assets/IITs/Bombay.png";
-import coep from "../assets/IITs/Coep.png";
-import deendayal from "../assets/IITs/Deendayal.png";
-import guwahati from "../assets/IITs/Gwahati.png";
-import iiithyd from "../assets/IITs/IIIThyd.png";
-import iitdelhi from "../assets/IITs/IITdelhi.png";
-import iitkgp from "../assets/IITs/iitkgp.png";
-import kanpur from "../assets/IITs/kanpur.png";
-import nitk from "../assets/IITs/NITK.png";
-import roorkee from "../assets/IITs/roorkee.png";
+import amrita from "../../assets/IITs/Amrita.png";
+import bombay from "../../assets/IITs/Bombay.png";
+import coep from "../../assets/IITs/Coep.png";
+import deendayal from "../../assets/IITs/Deendayal.png";
+import guwahati from "../../assets/IITs/Gwahati.png";
+import iiithyd from "../../assets/IITs/IIIThyd.png";
+import iitdelhi from "../../assets/IITs/IITdelhi.png";
+import iitkgp from "../../assets/IITs/iitkgp.png";
+import kanpur from "../../assets/IITs/kanpur.png";
+import nitk from "../../assets/IITs/NITK.png";
+import roorkee from "../../assets/IITs/roorkee.png";
 
 // Logo data
 const logos = [
@@ -39,7 +39,7 @@ const MovingIITs = () => {
         <motion.div
           className="flex flex-nowrap items-center space-x-8 w-max"
           animate={{ x: ["0%", "-60%"] }} // Moves only 50% to prevent excess width
-          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
         >
           {[...logos, ...logos].map((logo, index) => (
             <div key={index} className="flex flex-col items-center w-20">
