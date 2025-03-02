@@ -5,7 +5,7 @@
   const Educator = () => {
     return (
       <div>
-      <Navbar/>
+      <Navbar/> 
         <div>
           {<Outlet/>}
         </div>

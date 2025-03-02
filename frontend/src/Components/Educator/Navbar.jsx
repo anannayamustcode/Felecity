@@ -1,28 +1,43 @@
 import React from "react";
-import logo from "../../assets/logoo.png";
 import { Link } from "react-router-dom";
-import { useUser } from "../../context/Appcontext";  // Ensure this is the correct path
+import { useUser } from "../../context/Appcontext";
 
-// Import UserButton if it exists
-// import { UserButton } from "../../components/UserButton"; 
-
-const Navbar = () => {  // ✅ Component name should start with uppercase
+const Navbar = () => {
   const { user } = useUser();
 
   return (
-    <div className="flex items-center justify-between px-4 md:px-8 border-b border-gray-500 py-3">
-      <Link to="/">
-        <img src={logo} alt="Logo" className="w-28 lg:w-32" />
-      </Link>
-      <div className="flex items-center gap-5 text-gray-500 relative">
-        <p>Hi! {user ? user.fullName : "Developers"}</p>
+    <nav className="flex justify-between items-center py-4 border-b border-gray-300 sticky top-0 z-50 bg-white px-6">
+      {/* Left Section: Logo */}
+      <div className="flex items-center gap-2">
+        <Link to="/">
+          <img src="/src/assets/logoo.png" alt="Virtual Labs Logo" className="h-14" />
+        </Link>
+        <Link to="/">
+          <div className="flex flex-col leading-tight">
+            <h1 className="text-2xl font-bold">Virtual</h1>
+            <h1 className="text-2xl font-bold">Labs 2.0</h1>
+          </div>
+        </Link>
+      </div>
+
+      {/* Right Section: User Profile */}
+      <div className="flex items-center gap-4 text-gray-500">
+        <p className="hidden sm:block text-base font-medium">
+          Hi! {user ? user.fullName : "Developer"}
+        </p>
         {user ? (
-          <button>Logout</button>  // Replace with <UserButton /> if available
+          <button className="px-4 py-2 text-sm font-semibold bg-gray-100 rounded-lg hover:bg-gray-200 transition">
+            Logout
+          </button>
         ) : (
-          <img className="max-w-8" src="/default-profile.png" alt="Profile" />  // Replace with a valid image path
+          <img
+            className="w-10 h-10 rounded-full border border-gray-300 object-cover"
+            src="/default-profile.png" 
+            alt="Profile"
+          />
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 
