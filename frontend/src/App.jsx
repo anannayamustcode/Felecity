@@ -12,6 +12,7 @@ import AddLab from './Pages/Educator/AddLab';
 
 const App = () => {
   return (
+    
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />

@@ -12,13 +12,13 @@ const navbar = () => {
       <Link to='/'>
         <img src={logo} alt="Logo" className="w-28 lg:w-32" />
       </Link>
-      {/* <div className="flex items-center gap-5 text-gray-500 relative">
+      <div className="flex items-center gap-5 text-gray-500 relative">
         <p>Hi! {user ? user.fullName : 'Developers'}</p>
         {user ? <UserButton /> : <img className='max-w-8' src={assets.profile_img} />}
-      </div> */}
+      </div>
     </div>
   )
   
 }
 
-export default navbar
+export default navbar ;

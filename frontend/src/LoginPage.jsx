@@ -27,6 +27,7 @@ const LoginPage = () => {
             Log In
           </button>
         </form>
+        <Link></Link>
         <p className="text-center text-gray-600 mt-4">
           Don't have an account? <Link to="/signup" className="text-blue-500 hover:underline">Sign up</Link>
         </p>

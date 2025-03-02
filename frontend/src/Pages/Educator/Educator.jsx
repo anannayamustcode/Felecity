@@ -12,4 +12,4 @@ const Educator = () => {
   )
 }
 
-export default Educator
+export default Educator;
