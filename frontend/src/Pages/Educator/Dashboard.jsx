@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const Dashboard = () => {
+  console.log("Dashboard is being rendered!");
   return (
     <div>
-      <h1>DashBoard</h1>
+      <h1>Welcome to the Educator Dashboard</h1>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
