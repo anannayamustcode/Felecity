@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../navbar"; // Import general navbar
+import Navbar from "../Pages/Students/navbar"; // Import general navbar
 import { Outlet } from "react-router-dom";
 
 const LayoutGeneral = () => {

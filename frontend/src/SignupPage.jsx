@@ -25,13 +25,14 @@ const SignupPage = () => {
   placeholder="Password"
   class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-500"
 />
-
+<Link to={'/educator'}>
           <button 
             type="submit"
-            className="w-full bg-blue-500 text-gray p-3 rounded-lg font-medium hover:bg-blue-600 transition-all"
+            className="w-full bg-blue-500 text-white p-3 rounded-lg font-medium hover:bg-blue-600 hover:cursor-pointer transition-all"
           >
             Sign Up
           </button>
+          </Link>
         </form>
         <p className="text-center text-gray-600 mt-4">
           Already have an account? <Link to="/login" className="text-blue-500 hover:underline">Log in</Link>
