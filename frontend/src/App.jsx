@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from './Landing';
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
-import Explore from './Explore';
+import Explore from './Pages/Students/Explore';
 import MyLabs from './Pages/Educator/MyLabs';
 import Educator from './Pages/Educator/Educator';
 import Dashboard from './Pages/Educator/Dashboard';
@@ -12,7 +12,7 @@ import AddLab from './Pages/Educator/AddLab';
 
 const App = () => {
   return (
-    
+
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
