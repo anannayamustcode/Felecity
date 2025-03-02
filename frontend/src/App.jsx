@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from './Landing';
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
-import Explore from './Explore'; // Import the Explore component
+import Explore from './Explore'; // Correct the import case
 
 const App = () => {
   return (
