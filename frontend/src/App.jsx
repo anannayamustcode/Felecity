@@ -15,7 +15,7 @@ import LayoutEducator from "./Layouts/LayoutEducator";  // Layout with Educator 
 const App = () => {
   return (
 
-    <Router>
+   
       <Routes>
       <Route path="/" element={<LayoutGeneral />}>
 
@@ -32,7 +32,7 @@ const App = () => {
           <Route path="addlab" element={<AddLab />} />
         </Route>
       </Routes>
-    </Router>
+   
   );
 };
 
