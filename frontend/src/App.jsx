@@ -20,10 +20,11 @@ const App = () => {
       <Route path="/" element={<LayoutGeneral />}>
 
         <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
         <Route path="/explore" element={<Explore />} />
         </Route>
+
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
         {/* Parent Route for Educator Section */}
 
         <Route path="/educator" element={<LayoutEducator />}>
