@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Add this import for navigation links
 
 const subjects = [
   { name: "Electronics & Communications", icon: "📡" },
