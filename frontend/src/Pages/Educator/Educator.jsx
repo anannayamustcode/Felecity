@@ -1,16 +1,16 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom';
-import { Link } from "react-router-dom";
-import Navbar from '../../Components/Educator/navbar';
-const Educator = () => {
-  return (
-    <div>
-     <Navbar/>
+  import React from 'react'
+  import { Outlet } from 'react-router-dom';
+  import { Link } from "react-router-dom";
+  import Navbar from '../../Components/Educator/navbar';
+  const Educator = () => {
+    return (
       <div>
-        {<Outlet/>}
+      <Navbar/>
+        <div>
+          {<Outlet/>}
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
-export default Educator;
+  export default Educator;
