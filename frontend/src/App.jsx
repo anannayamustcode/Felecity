@@ -9,31 +9,31 @@ import MyLabs from './Pages/Educator/MyLabs';
 import Educator from './Pages/Educator/Educator';
 import Dashboard from './Pages/Educator/Dashboard';
 import AddLab from './Pages/Educator/AddLab';
-import LayoutGeneral from "./Layouts/LayoutGeneral";  // Layout with General Navbar
-import LayoutEducator from "./Layouts/LayoutEducator";  // Layout with Educator Navbar
+import AboutUs from './AboutUs'; // ✅ Added About Us page
+import LayoutGeneral from "./Layouts/LayoutGeneral";  // Layout for students (with footer)
+import LayoutEducator from "./Layouts/LayoutEducator";  // Layout for educators (without footer)
 
 const App = () => {
   return (
-
-   
-      <Routes>
+    <Routes>
+      {/* ✅ General Layout (For Public Pages) */}
       <Route path="/" element={<LayoutGeneral />}>
+        <Route index element={<LandingPage />} />
+        <Route path="explore" element={<Explore />} />
+        <Route path="aboutus" element={<AboutUs />} /> {/* ✅ About Us page */}
+      </Route>
 
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/explore" element={<Explore />} />
-        </Route>
+      {/* ✅ Routes Without Layout (Login & Signup) */}
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
 
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        {/* Parent Route for Educator Section */}
-
-        <Route path="/educator" element={<LayoutEducator />}>
-          <Route index element={<Dashboard />} /> {/* Default page when visiting /educator */}
-          <Route path="mylabs" element={<MyLabs />} />
-          <Route path="addlab" element={<AddLab />} />
-        </Route>
-      </Routes>
-   
+      {/* ✅ Educator Layout (No Footer) */}
+      <Route path="/educator" element={<LayoutEducator />}>
+        <Route index element={<Dashboard />} />
+        <Route path="mylabs" element={<MyLabs />} />
+        <Route path="addlab" element={<AddLab />} />
+      </Route>
+    </Routes>
   );
 };
 

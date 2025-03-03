@@ -1,12 +1,19 @@
 import React from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Pages/Students/navbar"; // Import general navbar
-import { Outlet } from "react-router-dom";
+import Footer from "../footer"; // Import footer
 
 const LayoutGeneral = () => {
+  const location = useLocation();
+  const showFooter = location.pathname === "/" || location.pathname === "/aboutus"; // ✅ Footer only on Home & About
+
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <Outlet />
+      <div className="flex-grow">
+        <Outlet />
+      </div>
+      {showFooter && <Footer />} {/* ✅ Conditional Footer */}
     </div>
   );
 };
