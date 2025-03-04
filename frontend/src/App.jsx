@@ -12,6 +12,7 @@ import AddLab from './Pages/Educator/AddLab';
 import AboutUs from './AboutUs'; // ✅ Added About Us page
 import LayoutGeneral from "./Layouts/LayoutGeneral";  // Layout for students (with footer)
 import LayoutEducator from "./Layouts/LayoutEducator";  // Layout for educators (without footer)
+import Experiment from './Experiment';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
       </Route>
 
       {/* ✅ Routes Without Layout (Login & Signup) */}
+      <Route path="/experiment" element={<Experiment />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
 

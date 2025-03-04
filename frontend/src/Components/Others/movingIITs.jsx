@@ -39,7 +39,7 @@ const MovingIITs = () => {
         <motion.div
           className="flex flex-nowrap items-center space-x-8 w-max"
           animate={{ x: ["0%", "-60%"] }} // Moves only 50% to prevent excess width
-          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+          transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
         >
           {[...logos, ...logos].map((logo, index) => (
             <div key={index} className="flex flex-col items-center w-20">
